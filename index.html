@@ -18,26 +18,103 @@
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                    <form id="loan-form">
+                        <!-- No action attribute on form -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text ">$</span>
+                                </div>
+                                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
 
+                                <!-- input type = "number" only allows numbers to be input and no other text-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                                <input type="number" class="form-control" id="interest" placeholder="Interest">
+
+                                <!-- input type = "number" only allows numbers to be input and no other text-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="years" placeholder="Years to Repay">
+                        </div>
+                        <div class="form-button">
+                            <input type="submit" value="Caculate" class="btn btn-dark btn-block">
+                        </div>
+                    </form>
+                    <!-- LOADER HERE -->
+
+
+                    <!-- <div id="loading">
+                        <img src="img/ajax-loader-cs.gif" alt="results is being processed">
+                    </div> -->
+
+
+
+                    <!-- RESULTS : In an ideal application, would only view when the form field has been been provided the inputs-->
+                    <!-- There are various ways in which the result page can be shown but for this example, it'll be shown through <input> fields that are disabled and thus only readable and not changeable -->
+                    <div id="results" class="pt-4">
+                        <h5>Results</h5>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text ">Monthly Payment</span>
+                                </div>
+                                <input type="number" class="form-control" id="monthly-payment" disabled>
+
+                                <!-- input type = "number" only allows numbers to be input and no other text-->
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text ">Total Payment</span>
+                                </div>
+                                <input type="number" class="form-control" id="total-payment" disabled>
+
+                                <!-- input type = "number" only allows numbers to be input and no other text-->
+                            </div>
+
+
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text ">Total Interest</span>
+                                </div>
+                                <input type="number" class="form-control" id="total-interest" disabled>
+
+                                <!-- input type = "number" only allows numbers to be input and no other text-->
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
 
-
-    </div>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+        </script>
+        <script src="app.js"></script>
 </body>
 
 </html>
