@@ -63,12 +63,10 @@ The possible values can be +infinity, -infinity, or NaN(Not-a-Number), otherwise
 5.  insertBefore(): applied to the parent element and it inserts an node before a certain node,eg,
     parent node.insertBefore(newnode, existingnode)
 
-6.
-
-a. setTimeOut(function,3000):
+6.a. setTimeOut(function,3000):
 Window Function calls a function or evaluates an expression after a specified number of milliseconds.
 
-b. setInterval(function,3000): calls a function every 3 Seconds. The setInterval() method will continue calling the function until clearInterval()
+6.b. setInterval(function,3000): calls a function every 3 Seconds. The setInterval() method will continue calling the function until clearInterval()
 is called, or the window is closed.
 
-c. clearInterval() : clears a timer set with the setTimeOut() or setInterval() and prevents the callouts for those 2 methods
+6.c. clearInterval() : clears a timer set with the setTimeOut() or setInterval() and prevents the callouts for those 2 methods
