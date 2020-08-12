@@ -35,7 +35,7 @@ function calculateResults(e) {
 
     if (isFinite(monthly)) {
         document.querySelector("#loading").style.display = "block";
-        setTimeout(loadingsnapshot, 2000);
+        setTimeout(loadingResults, 2000);
         monthlyPayment.value = monthly.toFixed(2);
         totalPayment.value = (monthly * calculatedPayments).toFixed(2);
         totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2);
@@ -46,7 +46,7 @@ function calculateResults(e) {
     }
 }
 
-function loadingsnapshot() {
+function loadingResults() {
     // document.querySelector("#loading").remove()
     document.querySelector("#loading").style.display = "none";
     document.querySelector("#results").style.display = "block";
