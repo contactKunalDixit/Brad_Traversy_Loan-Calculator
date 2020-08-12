@@ -1,6 +1,13 @@
 // Listen for submit 
 
-document.querySelector("#loan-form").addEventListener("submit", calculateResults) /*event bubbling in action since event handler is on a parent and event submit initiates deep within a child */
+document.querySelector("#loan-form").addEventListener("submit", function (e) {
+    // hide results
+    document.querySelector("#results").style.display = "none";
+    // hide Loading 
+    document.querySelector("#loading").style.display = "none";
+    calculateResults();
+    e.preventDefault()
+}) /*event bubbling in action since event handler is on a parent and event submit initiates from deep within a child */
 
 // Create calculateResults
 
@@ -27,19 +34,22 @@ function calculateResults(e) {
     /* Now check and ensure that monthly variable above is a finite number . Use method isFinite()*/
 
     if (isFinite(monthly)) {
-        monthlyPayment.value = monthly.toFixed(2)
-        totalPayment.value = (monthly * calculatedPayments).toFixed(2)
-        totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2)
+        document.querySelector("#loading").style.display = "block";
+        setTimeout(loadingsnapshot, 2000);
+        monthlyPayment.value = monthly.toFixed(2);
+        totalPayment.value = (monthly * calculatedPayments).toFixed(2);
+        totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2);
+
     } else {
 
         showError("Please check your numbers") /* function showError runs with your customised error msg */
-
-
     }
+}
 
-    e.preventDefault()
-
-
+function loadingsnapshot() {
+    // document.querySelector("#loading").remove()
+    document.querySelector("#loading").style.display = "none";
+    document.querySelector("#results").style.display = "block";
 }
 
 // Create showError Function

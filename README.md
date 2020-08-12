@@ -45,6 +45,18 @@ disabled: disables the particular option by greying out
 
 ///////////////////////////////////////////////////////
 
+**_CSS_**
+
+#loading and #results have been hidden initially through
+
+#loading,#results{
+display:hidden;
+}
+
+///////////////////////////////////////////////////////
+
+---
+
 **_JS_**
 
 1. parsefloat() : Converts a string or an object into a floating decimal number..checks if the first character of a string/ an object can be converted to a floating decimal number and if yes, then it parses the string until it reaches the end of the number, and returns as a number, not a string
@@ -70,3 +82,5 @@ Window Function calls a function or evaluates an expression after a specified nu
 is called, or the window is closed.
 
 6.c. clearInterval() : clears a timer set with the setTimeOut() or setInterval() and prevents the callouts for those 2 methods
+
+7.  Loading image runs gif image
