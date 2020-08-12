@@ -1,5 +1,7 @@
 # Brad_Traversy_Loan-Calculator
 
+**_HTML_**
+
 ## Bootstrap - Bootstap classes used:
 
 .bg-dark: color
@@ -40,3 +42,33 @@
 ---
 
 disabled: disables the particular option by greying out
+
+///////////////////////////////////////////////////////
+
+**_JS_**
+
+1. parsefloat() : Converts a string or an object into a floating decimal number..checks if the first character of a string/ an object can be converted to a floating decimal number and if yes, then it parses the string until it reaches the end of the number, and returns as a number, not a string
+
+If the number cant be converted into number, parsefloat() returns NaN
+
+2. Math.pow: Math.pow(4,3)
+   equals 4*4*4
+
+3. isFinite() : checks werhwe number is a finite, legitimate number
+
+The possible values can be +infinity, -infinity, or NaN(Not-a-Number), otherwise it returns True
+
+4.  toFixed(): Converts a number into a STRING, rounding to a specfied number of decimals
+
+5.  insertBefore(): applied to the parent element and it inserts an node before a certain node,eg,
+    parent node.insertBefore(newnode, existingnode)
+
+6.
+
+a. setTimeOut(function,3000):
+Window Function calls a function or evaluates an expression after a specified number of milliseconds.
+
+b. setInterval(function,3000): calls a function every 3 Seconds. The setInterval() method will continue calling the function until clearInterval()
+is called, or the window is closed.
+
+c. clearInterval() : clears a timer set with the setTimeOut() or setInterval() and prevents the callouts for those 2 methods
